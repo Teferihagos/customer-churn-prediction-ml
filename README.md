@@ -47,6 +47,17 @@ Can we accurately predict which customers are likely to churn using historical c
 | Random Forest       | 0.79    | 0.51           | ~0.84  |
 | Decision Tree       | 0.72    | 0.48           | 0.65   |
 
+## Results Summary
+
+Logistic Regression provided the best overall balance between performance and interpretability, achieving an accuracy of 0.81 and ROC-AUC of 0.84. While Random Forest captured more complex patterns, it showed slightly lower recall for churn customers. The Decision Tree performed the worst, likely due to overfitting.
+
+## Limitations
+
+- The dataset is imbalanced, which affects churn prediction performance  
+- Recall for churn customers remains moderate, meaning some at-risk customers are missed  
+- The model is trained on a relatively small public dataset and may not generalize to real-world scenarios fully.
+  
+
 ## Visualizations
 
 ### Churn Distribution
