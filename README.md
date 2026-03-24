@@ -176,6 +176,37 @@ notebooks/01_customer_churn_analysis.ipynb
 * Hyperparameter tuning
 * Deploy model (Streamlit / FastAPI)
 * Build a real-time prediction pipeline
+---
+
+## How to Run
+
+1. Clone the repository.
+2. Install dependencies using `pip install -r requirements.txt`.
+3. Open the notebook `notebooks/01_customer_churn_analysis.ipynb`.
+4. Run all cells in order to reproduce the analysis, visualizations, and model results.
+---
+
+## Top Churn Drivers
+
+The analysis suggests that the strongest churn indicators include:
+
+- Month-to-month contract type
+- Short customer tenure
+- Higher monthly charges
+
+These factors are important because they help explain which customers are most likely to leave and where the business should focus its retention efforts.
+---
+
+## Business Recommendations
+
+Based on the model results and exploratory analysis, businesses can take several practical actions to reduce customer churn:
+
+- Focus on customers with month-to-month contracts, since they show the highest churn risk.
+- Provide retention offers or loyalty incentives to customers with high monthly charges.
+- Strengthen onboarding and early support for newer customers, since short tenure is strongly associated with churn.
+- Use churn predictions to identify high-risk customers early and target them with proactive customer service interventions.
+
+These actions can help reduce revenue loss and improve long-term customer retention.
 
 ---
 
