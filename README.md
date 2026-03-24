@@ -148,28 +148,6 @@ customer-churn-prediction-ml/
 
 ---
 
-## How to Run
-
-Clone the repo:
-
-```bash
-git clone https://github.com/your-username/customer-churn-prediction-ml.git
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run notebook:
-
-```bash
-notebooks/01_customer_churn_analysis.ipynb
-```
-
----
-
 ## Future Improvements
 
 * Handle imbalance using SMOTE or class weighting
