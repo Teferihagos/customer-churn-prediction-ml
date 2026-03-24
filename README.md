@@ -108,10 +108,14 @@ The model can help businesses identify high-risk customers early, allowing targe
 * True Positive → correctly predicted churn
 * False Negative → missed churn (very important problem)
 
+* ![Confusion Matrix](images/confusion_matrix.png)
+
 ### ROC Curve
 
 * Shows how well the model separates churn vs non-churn
 * AUC = 0.84 → good performance
+
+![ROC Curve](images/roc_curve.png)
 
 ---
 
