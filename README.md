@@ -101,7 +101,7 @@ The model can help businesses identify high-risk customers early, allowing targe
 
 ---
 
-## Model Evaluation (What Recruiters Look For)
+## Model Evaluation
 
 ### Confusion Matrix (Explain Simply)
 
