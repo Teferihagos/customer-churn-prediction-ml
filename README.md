@@ -182,9 +182,11 @@ notebooks/01_customer_churn_analysis.ipynb
 ## Author
 
 Teferi Hagos
+
 Machine Learning Engineer | Data Scientist
 
 GitHub: https://github.com/Teferihagos
+
 Kaggle: https://www.kaggle.com/teferihagos
 
 ---
