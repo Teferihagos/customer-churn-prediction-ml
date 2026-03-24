@@ -1,100 +1,135 @@
+# Customer Churn Prediction (End-to-End ML Project)
+
 ## Project Overview
 
-Customer churn is a critical business problem, as retaining existing customers is often significantly more cost-effective than acquiring new ones.
+Customer churn is a major business problem. It is much cheaper to retain existing customers than to acquire new ones.
 
-This project develops a machine learning model to predict customer churn using behavioral, demographic, and account-related features. The goal is to help businesses identify at-risk customers early and take proactive retention actions.
+This project builds a machine learning model to predict which customers are likely to leave (churn), using real customer data. The goal is to help businesses act early and reduce churn.
 
 ---
 
 ## Business Problem
 
-Can we accurately predict which customers are likely to churn using historical customer data?
+Can we identify customers who are likely to churn before they leave?
+
+If yes, companies can:
+
+* Offer discounts
+* Improve service
+* Target high-risk customers
 
 ---
 
 ## Dataset
 
-- IBM Telco Customer Churn Dataset  
-- ~7,000 customer records  
-- Features include demographics, services subscribed, contract details, and billing information  
+IBM Telco Customer Churn Dataset
+
+* ~7,000 customers
+* Features:
+
+  * Demographics (age, gender)
+  * Account info (tenure, contract type)
+  * Services (internet, phone)
+  * Billing (monthly charges, payment method)
 
 ---
 
 ## Project Workflow
 
-1. Data Cleaning and Preprocessing  
-2. Exploratory Data Analysis (EDA)  
-3. Feature Engineering  
-4. Model Training  
-5. Model Evaluation and Comparison  
-6. Business Insights and Recommendations  
+1. Data Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Feature Engineering
+4. Model Training
+5. Model Evaluation
+6. Business Insights
 
 ---
 
 ## Models Used
 
-- Logistic Regression (baseline model)  
-- Decision Tree  
-- Random Forest (ensemble model)  
+* Logistic Regression (baseline)
+* Decision Tree
+* Random Forest
 
 ---
 
 ## Model Performance
 
-| Model                | Accuracy | Recall (Churn) | ROC-AUC |
-|---------------------|---------|----------------|--------|
-| Logistic Regression | 0.81    | 0.57           | 0.84   |
-| Random Forest       | 0.79    | 0.51           | ~0.84  |
-| Decision Tree       | 0.72    | 0.48           | 0.65   |
+| Model               | Accuracy | Recall (Churn) | ROC-AUC |
+| ------------------- | -------- | -------------- | ------- |
+| Logistic Regression | 0.81     | 0.57           | 0.84    |
+| Random Forest       | 0.79     | 0.51           | ~0.84   |
+| Decision Tree       | 0.72     | 0.48           | 0.65    |
 
-## Results Summary
+---
 
-Logistic Regression provided the best overall balance between performance and interpretability, achieving an accuracy of 0.81 and ROC-AUC of 0.84. While Random Forest captured more complex patterns, it showed slightly lower recall for churn customers. The Decision Tree performed the worst, likely due to overfitting.
+## Key Insight (Important)
+
+The model can help businesses identify high-risk customers early, allowing targeted retention strategies that can reduce revenue loss.
+
+---
+
+## Why Logistic Regression Won
+
+* Best balance of performance + interpretability
+* Easy to explain to business stakeholders
+* Stable results on this dataset
+
+---
 
 ## Limitations
 
-- The dataset is imbalanced, which affects churn prediction performance  
-- Recall for churn customers remains moderate, meaning some at-risk customers are missed  
-- The model is trained on a relatively small public dataset and may not generalize to real-world scenarios fully.
-  
+* Dataset is imbalanced (fewer churn cases)
+* Recall is moderate → some churn customers are missed
+* Model trained on public dataset (may not generalize fully)
+
+---
 
 ## Visualizations
 
 ### Churn Distribution
-![Churn Distribution](images/churn_distribution.png)
+
+![Churn](images/churn_distribution.png)
 
 ### Monthly Charges vs Churn
-![Monthly Charges vs Churn](images/monthly_charges_vs_churn.png)
+
+![Charges](images/monthly_charges_vs_churn.png)
 
 ### Tenure vs Churn
-![Tenure vs Churn](images/tenure_vs_churn.png)
 
-### Contract Type vs Churn
-![Contract Type vs Churn](images/contract_vs_churn.png)
+![Tenure](images/tenure_vs_churn.png)
 
-### Internet Service vs Churn
-![Internet Service vs Churn](images/internet_service_vs_churn.png)
-
-### Payment Method vs Churn
-![Payment Method vs Churn](images/payment_method_vs_churn.png)
 ---
 
-## Key Insights
+## Model Evaluation (What Recruiters Look For)
 
-- Customers with **short tenure** are significantly more likely to churn  
-- **Month-to-month contracts** have the highest churn rates  
-- Higher **monthly charges** are associated with increased churn risk  
-- The dataset is **imbalanced**, making churn prediction more challenging and affecting recall  
+### Confusion Matrix (Explain Simply)
+
+* True Positive → correctly predicted churn
+* False Negative → missed churn (very important problem)
+
+### ROC Curve
+
+* Shows how well the model separates churn vs non-churn
+* AUC = 0.84 → good performance
+
+---
+
+## Key Business Insights
+
+* Customers with short tenure churn more
+* Month-to-month contracts have highest churn
+* Higher monthly charges increase churn risk
 
 ---
 
 ## Technologies Used
 
-- Python  
-- Pandas  
-- NumPy  
-- Scikit-learn  
-- Matplotlib  
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
 
 ---
 
@@ -102,45 +137,49 @@ Logistic Regression provided the best overall balance between performance and in
 
 customer-churn-prediction-ml/
 
-├── data/
-├── notebooks/
-├── src/
-├── models/
-├── reports/
-├── images/
-├── README.md
-├── requirements.txt
-├── .gitignore
-
+* notebooks/ → analysis notebook
+* images/ → charts
+* README.md → project summary
 
 ---
 
-## How to Run This Project
+## How to Run
 
-1. Clone the repository  
-2. Install dependencies:
+Clone the repo:
+
+```bash
+git clone https://github.com/your-username/customer-churn-prediction-ml.git
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the notebook:
+Run notebook:
+
+```bash
 notebooks/01_customer_churn_analysis.ipynb
-
+```
 
 ---
 
 ## Future Improvements
 
-- Improve recall using class imbalance techniques (e.g., SMOTE, class weighting)  
-- Perform hyperparameter tuning for better model performance  
-- Deploy the model using Streamlit or FastAPI  
-- Build a real-time churn prediction pipeline  
+* Handle imbalance using SMOTE or class weighting
+* Hyperparameter tuning
+* Deploy model (Streamlit / FastAPI)
+* Build a real-time prediction pipeline
 
 ---
 
 ## Author
 
-Teferi Hagos  
-Machine Learning Engineer | AI Engineer | Data Scientist  
+Teferi Hagos
+Machine Learning Engineer | Data Scientist
 
-GitHub: https://github.com/Teferihagos  
-Kaggle: https://www.kaggle.com/teferihagos  
+GitHub: https://github.com/Teferihagos
+Kaggle: https://www.kaggle.com/teferihagos
 
+---
