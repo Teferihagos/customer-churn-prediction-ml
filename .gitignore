@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Data files (optional - comment out if you want to upload data)
+data/*.csv
+
+# Models
+models/
+
+# Logs
+*.log
+
+# Environment variables
+.env
