@@ -63,7 +63,7 @@ IBM Telco Customer Churn Dataset
 
 ---
 
-## Key Insight (Important)
+## Key Insight
 
 The model can help businesses identify high-risk customers early, allowing targeted retention strategies that can reduce revenue loss.
 
@@ -109,6 +109,7 @@ The model can help businesses identify high-risk customers early, allowing targe
 * False Negative → missed churn (very important problem)
 
 * ![Confusion Matrix](images/confusion_matrix.png)
+  
 
 ### ROC Curve
 
