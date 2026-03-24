@@ -2,7 +2,7 @@
 
 Customer churn is a critical business problem, as retaining existing customers is often significantly more cost-effective than acquiring new ones.
 
-This project develops a machine learning solution to predict customer churn based on behavioral, demographic, and account-related features. The goal is to help businesses identify at-risk customers early and take proactive retention actions.
+This project develops a machine learning model to predict customer churn using behavioral, demographic, and account-related features. The goal is to help businesses identify at-risk customers early and take proactive retention actions.
 
 ---
 
@@ -47,6 +47,25 @@ Can we accurately predict which customers are likely to churn using historical c
 | Random Forest       | 0.79    | 0.51           | ~0.84  |
 | Decision Tree       | 0.72    | 0.48           | 0.65   |
 
+## Visualizations
+
+### Churn Distribution
+![Churn Distribution](images/churn_distribution.png)
+
+### Monthly Charges vs Churn
+![Monthly Charges vs Churn](images/monthly_charges_vs_churn.png)
+
+### Tenure vs Churn
+![Tenure vs Churn](images/tenure_vs_churn.png)
+
+### Contract Type vs Churn
+![Contract Type vs Churn](images/contract_vs_churn.png)
+
+### Internet Service vs Churn
+![Internet Service vs Churn](images/internet_service_vs_churn.png)
+
+### Payment Method vs Churn
+![Payment Method vs Churn](images/payment_method_vs_churn.png)
 ---
 
 ## Key Insights
@@ -71,6 +90,7 @@ Can we accurately predict which customers are likely to churn using historical c
 ## Project Structure
 
 customer-churn-prediction-ml/
+
 ├── data/
 ├── notebooks/
 ├── src/
